@@ -27,9 +27,42 @@ html {
 
 body {
     display: grid;
-    grid-template: 90px 1fr auto / 350px 1fr;
+    grid-template: 80px 1fr auto / 350px 1fr;
     grid-template-areas: "menu header" "menu peliculas" "menu busqueda";
 }
+
+/* --------------------------- *\
+		    HEADER
+\* --------------------------- */
+
+#header {
+    padding: 0 var(--espaciado-leve);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    #header input {
+        height: 40px;
+        width: 280px;
+        font-weight: 350;
+        padding: 0 var(--espaciado-leve);
+        background-color: var(--color-lightgray);
+        box-shadow: 0px 0px 10px 0px var(--color-lightgray);
+        
+        border: none;
+        border-radius: var(--espaciado-leve);
+    }
+    
+    #header img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: var(--espaciado-leve);
+        object-fit: cover;
+        vertical-align: middle;
+    }
 
 /* --------------------------- *\
 		SECCION DE MENU
@@ -100,6 +133,6 @@ body {
                     .menu-link img {
                         width: 40px;
                         border-radius: 50%;
-                        padding-right: var(--espaciado-leve);
+                        margin-right: var(--espaciado-leve);
                         vertical-align: middle;
                     }
