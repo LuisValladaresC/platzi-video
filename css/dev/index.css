@@ -26,6 +26,8 @@ html {
 }
 
 body {
+    height: 100vh;
+
     display: grid;
     grid-template: 80px 1fr auto / 350px 1fr;
     grid-template-areas: "menu header" "menu peliculas" "menu busqueda";
@@ -70,8 +72,6 @@ body {
 
 #seccion-menu {
     grid-area: menu;
-
-    height: 100vh;
     padding: var(--espaciado-normal);
     box-sizing: border-box;
 
@@ -118,6 +118,7 @@ body {
         }
 
             .navbar-lista li {
+                font-size: 0.9em;
                 margin: var(--espaciado-leve) 0;
             }
 
@@ -131,8 +132,57 @@ body {
                 }
 
                     .menu-link img {
-                        width: 40px;
+                        width: 35px;
                         border-radius: 50%;
                         margin-right: var(--espaciado-leve);
                         vertical-align: middle;
                     }
+
+/* --------------------------- *\
+	SECCION DE PELICULAS
+\* --------------------------- */
+
+#seccion-peliculas {
+    overflow: auto;
+    padding: 0 var(--espaciado-leve);
+}
+
+    .peliculas-subtitulo {
+        color: var(--color-gray);
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .peliculas-titulo {
+        margin-top: 0;
+        margin-bottom: var(--espaciado-leve);
+
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .peliculas-container {
+        display: flex;
+        margin-bottom: var(--espaciado-normal);
+    }
+
+        .pelicula {
+            margin: 0;
+            margin-right: var(--espaciado-leve);
+            cursor: pointer;
+        }
+
+            .pelicula img {
+                width: 170px;
+                height: 250px; /* */
+            }
+
+            .pelicula .loading {
+                height: initial; /* */
+            }
+
+            .pelicula figcaption {
+                color: #44546B;
+                font-size: 0.9em;
+                margin-top: var(--espaciado-muy-leve);
+            }
