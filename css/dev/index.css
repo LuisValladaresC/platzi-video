@@ -186,3 +186,32 @@ body {
                 font-size: 0.9em;
                 margin-top: var(--espaciado-muy-leve);
             }
+
+/* --------------------------- *\
+	SECCION DE BUSQUEDA
+\* --------------------------- */
+
+#seccion-busqueda {
+    height: 150px;
+    padding-left: var(--espaciado-muy-alto);
+
+    color: white;
+    background:  linear-gradient(to right, #ff0000, #ff458b);
+
+    display: flex;
+    align-items: center;
+}
+
+    #seccion-busqueda img {
+        width: 70px;
+        height: 100px; /* */
+        margin-right: var(--espaciado-normal)
+    }
+
+    #seccion-busqueda p {
+        margin-top: 0;
+    }
+
+    #seccion-busqueda h3 {
+        margin: 0;
+    }
