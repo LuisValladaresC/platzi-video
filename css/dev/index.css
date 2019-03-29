@@ -52,6 +52,7 @@ body {
         padding: 0 var(--espaciado-leve);
         background-color: var(--color-lightgray);
         box-shadow: 0px 0px 10px 0px var(--color-lightgray);
+        outline: none;
         
         border: none;
         border-radius: var(--espaciado-leve);
@@ -174,11 +175,7 @@ body {
 
             .pelicula img {
                 width: 170px;
-                height: 250px; /* */
-            }
-
-            .pelicula .loading {
-                height: initial; /* */
+                animation: fade-in 1s;
             }
 
             .pelicula figcaption {
@@ -187,13 +184,23 @@ body {
                 margin-top: var(--espaciado-muy-leve);
             }
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* --------------------------- *\
 	SECCION DE BUSQUEDA
 \* --------------------------- */
 
-#seccion-busqueda {
+.busqueda-pelicula {
     height: 150px;
-    padding-left: var(--espaciado-muy-alto);
+    padding-left: var(--espaciado-normal);
+    margin: 0;
 
     color: white;
     background:  linear-gradient(to right, #ff0000, #ff458b);
@@ -202,16 +209,15 @@ body {
     align-items: center;
 }
 
-    #seccion-busqueda img {
+    .busqueda-pelicula img {
         width: 70px;
-        height: 100px; /* */
-        margin-right: var(--espaciado-normal)
+        margin-right: var(--espaciado-leve)
     }
 
-    #seccion-busqueda p {
+    .busqueda-pelicula p {
         margin-top: 0;
     }
 
-    #seccion-busqueda h3 {
+    .busqueda-pelicula h3 {
         margin: 0;
     }

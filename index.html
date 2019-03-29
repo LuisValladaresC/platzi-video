@@ -11,66 +11,29 @@
 <body>
     <header id="header">
         <form action="" id="formulario">
-            <input type="text" name="peliculas" placeholder="Busca una Pelicula">
+            <input type="text" name="pelicula" placeholder="Busca una Pelicula">
+            <!-- <img src="./images/loader.gif" width="170px" height="170px"> -->
         </form>
-        <p>
-            <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/gorillaz.jpg" alt="Imagen de Usuario">Leonidas Esteban
-        </p>
+        <!-- <p>
+            <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/gorillaz.jpg" alt="Imagen de Usuario"><span>Leonidas Esteban</span>
+        </p> -->
     </header>
     <section id="seccion-menu">
         <img class="menu-imagen-titulo" src="./images/platzi-video.png" alt="Platzi Video">
         <nav class="menu-navbar">
             <h2 class="navbar-titulo">Peliculas Recientes</h2>
-            <ol class="navbar-lista peliculas-recientes">
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
-                <li><a class="menu-link">Peliculas Reciente (2019)</a></li>
+            <ol class="navbar-lista peliculas-recientes" id="lista-peliculas-recientes">
+                <!-- <li><a class="menu-link">Peliculas Reciente (2019)</a></li> -->
             </ol>
         </nav>
         <nav class="menu-navbar">
             <h2 class="navbar-titulo">Lista de Amigos</h2>
-            <ul class="navbar-lista amigos">
-                <li>
+            <ul class="navbar-lista amigos" id="lista-amigos">
+                <!-- <li>
                     <a class="menu-link">
                         <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
                     </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </section>
@@ -78,33 +41,41 @@
         <span class="peliculas-subtitulo">A los golpes</span>
         <h2 class="peliculas-titulo">Acción</h2>
         <div id="peliculas-accion" class="peliculas-container">
-            <figure class="pelicula">
+            <img src="./images/loader.gif" width="170px" height="170px">
+            <!-- <figure class="pelicula">
                 <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
                 <figcaption>Nombre de Pelicula</figcaption>
-            </figure>
+            </figure> -->
         </div>
+
         <span class="peliculas-subtitulo">Para llorar</span>
         <h2 class="peliculas-titulo">Drama</h2>
         <div id="peliculas-drama" class="peliculas-container">
-            <figure class="pelicula">
-                <img class="loading" src="./images/loader.gif" alt="pelicula">
-            </figure>
+            <img src="./images/loader.gif" width="170px" height="170px">
+            <!-- <figure class="pelicula">
+                <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
+                <figcaption>Nombre de Pelicula</figcaption>
+            </figure> -->
         </div>
+
         <span class="peliculas-subtitulo">Dibujitos Animados</span>
         <h2 class="peliculas-titulo">Animación</h2>
         <div id="peliculas-animacion" class="peliculas-container">
-            <figure class="pelicula">
+            <img src="./images/loader.gif" width="170px" height="170px">
+            <!-- <figure class="pelicula">
                 <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
                 <figcaption>Nombre de Pelicula</figcaption>
-            </figure>
+            </figure> -->
         </div>
     </section>
     <section id="seccion-busqueda">
-        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg">
-        <div>
-            <p>Pelicula Encontrada</p>
-            <h3>Nombre de Pelicula</h3>
-        </div>
+        <!-- <figure class="busqueda-pelicula">
+            <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg">
+            <div>
+                <p>Pelicula Encontrada</p>
+                <h3>Nombre de Pelicula</h3>
+            </div>
+        </figure> -->
     </section>
     <script src="index.js"></script>
 </body>
