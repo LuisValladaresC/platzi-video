@@ -6,7 +6,7 @@
     /* Colores */
 	--color-menu: #171929;
 	--color-black: #000000;
-	--color-gray: #848484;
+	--color-gray: #6c757d;
 	--color-lightgray: #f9f9f9;
 	--color-white: #ffffff;
     /* Espaciado */
@@ -184,15 +184,6 @@ body {
                 margin-top: var(--espaciado-muy-leve);
             }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* --------------------------- *\
 	SECCION DE BUSQUEDA
 \* --------------------------- */
@@ -221,3 +212,125 @@ body {
     .busqueda-pelicula h3 {
         margin: 0;
     }
+
+/* ----------------------------- *\
+        SECCION MODAL
+\* ----------------------------- */
+
+.modal-fondo {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    transform: translateY(-100vh);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-fondo.activo {
+    transform: initial;
+    animation: fade-in 500ms;
+}
+.modal-fondo.inactivo {
+    animation: fade-out 500ms;
+}
+
+    #modal-container {
+        max-width: 550px;
+        background-color: white;
+
+        margin: var(--espaciado-normal);
+        padding: 0 var(--espaciado-normal);
+        border-radius: var(--espaciado-muy-leve);
+    }
+    .activo #modal-container {
+        animation: modal-in 500ms;
+    }
+    .inactivo #modal-container {
+        animation: modal-out 500ms;
+    }
+
+        .modal-titulo {
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        .modal-contenido {
+            display: flex;
+            align-items: center;
+            
+            padding: var(--espaciado-alto) 0;
+            border-bottom: 1px solid var(--color-gray);
+            border-top: 1px solid var(--color-gray)
+        }
+            .modal-contenido img {
+                width: 170px;
+                object-fit: contain;
+            }
+            
+            .modal-contenido p {
+                margin: 0;
+                margin-left: var(--espaciado-normal)
+            }
+
+        .modal-button {
+            display: block;
+            padding: .5em 2em;
+            margin: var(--espaciado-normal) auto;
+            border-radius: var(--espaciado-muy-leve);
+
+            color: var(--color-white);
+            background-color: var(--color-gray);
+
+            outline: none;
+            cursor: pointer;
+            transition: 100ms;
+        }
+        .modal-button:active {
+            transform: scale(0.95);
+        }
+        .modal-button:hover {
+            background-color: #5a6268;
+        }
+
+/* ----------------------------- *\
+            ANIMACIONES
+\* ----------------------------- */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modal-in {
+    from {
+        transform: translateY(-6vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes modal-out {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-6vh);
+    }
+}

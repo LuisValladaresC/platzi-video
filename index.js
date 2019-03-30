@@ -1,6 +1,8 @@
+// SERVICIOS EXTERNOS
 const API_USUARIOS = `https://randomuser.me/api/?inc=name,picture&results=`;
 const API_PELICULAS = "https://yts.am/api/v2/list_movies.json";
 
+// CONTENEDORES
 const $navbar = document.getElementById('header');
 const $listaAmigos = document.getElementById('lista-amigos');
 const $listaPeliculasRecientes = document.getElementById('lista-peliculas-recientes');
@@ -8,6 +10,11 @@ const $peliculasAccion = document.getElementById('peliculas-accion');
 const $peliculasDrama = document.getElementById('peliculas-drama');
 const $peliculasAnimation = document.getElementById('peliculas-animacion');
 const $seccionBusqueda = document.getElementById('seccion-busqueda');
+const $modal = document.getElementById('modal');
+
+/* ------------------------------------------------------------------------- */
+/* TRABAJAMOS CON EL FORMULARIO DE BUSQUEDA, EL API Y LA SECCION DE BUSQUEDA */
+/* ------------------------------------------------------------------------- */
 
 const $formularioBusqueda = document.getElementById('formulario');
 
@@ -29,6 +36,10 @@ $formularioBusqueda.addEventListener("submit", async (event) => {
         $formularioBusqueda.children[1].remove()
     }
 });
+
+/* -------------------------------------------------------------------------------- */
+/* TRABAJAMOS CON DIFERENTES PETICIONES AL API PARA CREAR DIFERENTES ELEMENTOS HTML */
+/* -------------------------------------------------------------------------------- */
 
 (async function cargar_datos() {
     try {
@@ -160,16 +171,48 @@ function crear_elementoHTML(data, $contenedor) {
                 <h3>${data.title}</h3>
             </div>`
         return $elemento;
+
+        case $modal:
+            var $elemento = 
+            `<div id="modal-container">
+                <h2 class="modal-titulo">${data.title_long}</h2>
+                <div class="modal-contenido">
+                    <img src="${data.medium_cover_image}">
+                    <p>${data.description_full}</p>
+                </div>
+                <button class="modal-button" id="btn-cerrar-modal">Cerrar</button>
+            </div>`
+
+        return $elemento
     }
 }
 
-function agregar_atributos_a_nodo($elemento, atributos) {
-    for (let clave in atributos) {
-        $elemento.setAttribute(clave, atributos[clave])
-    }
-}
+/* -------------------------------------------------------------- */
+/* TRABAJAMOS CON UN MODAL PARA MOSTRAR LOS DATOS DE UNA PELICULA */
+/* -------------------------------------------------------------- */
 
 function abrirModal(data) {
-    console.log(data)
+    $modal.classList.remove('inactivo')
+    $modal.classList.add('activo')
+    $modal.innerHTML = crear_elementoHTML(data, $modal)
+
+    const $modalContainer = document.getElementById('modal-container');
+    const $btnCerrarModal = document.getElementById('btn-cerrar-modal');
+
+    $modal.addEventListener('click', animacionCierreModal);
+    $btnCerrarModal.addEventListener('click', animacionCierreModal);
+    $modalContainer.addEventListener('click', event => event.stopPropagation());
+
 }
+
+function animacionCierreModal() {
+    $modal.classList.add('inactivo')
+    $modal.addEventListener('animationend', cerrarModal)
+}
+
+function cerrarModal(event) {
+    event.target.removeEventListener(event.type, cerrarModal)
+    $modal.classList.remove('activo')
+}
+
 
