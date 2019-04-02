@@ -7,86 +7,120 @@
     <title>Platzi Video</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/dev/index.css">
+    <link rel="stylesheet" href="./css/dev/mobile.css">
 </head>
 <body>
     <header id="header">
-        <form action="" id="formulario">
+        <!-- Etiquetas visibles en dimensiones para movil -->
+        <a class="header-menu-button" id="menu-button"><img src="./images/menu.png"></a> 
+        <img class="header-imagen-titulo" src="./images/platzi-video.png" alt="Platzi Video">
+        <!-- Etiquetas visibles en dimensiones para movil -->
+
+        <form class="header-formulario" id="formulario" action="">
             <input type="text" name="pelicula" placeholder="Busca una Pelicula">
-            <!-- <img src="./images/loader.gif" width="170px" height="170px"> -->
+            <!-- Espacio para plantilla con Imagen de Loading -->
         </form>
-        <!-- <p>
-            <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/gorillaz.jpg" alt="Imagen de Usuario"><span>Leonidas Esteban</span>
-        </p> -->
+        <!-- Espacio para plantilla con Imagen y Nombre de Usuario -->
     </header>
     <section id="seccion-menu">
-        <img class="menu-imagen-titulo" src="./images/platzi-video.png" alt="Platzi Video">
-        <nav class="menu-navbar">
-            <h2 class="navbar-titulo">Peliculas Recientes</h2>
-            <ol class="navbar-lista peliculas-recientes" id="lista-peliculas-recientes">
-                <!-- <li><a class="menu-link">Peliculas Reciente (2019)</a></li> -->
-            </ol>
-        </nav>
-        <nav class="menu-navbar">
-            <h2 class="navbar-titulo">Lista de Amigos</h2>
-            <ul class="navbar-lista amigos" id="lista-amigos">
-                <!-- <li>
-                    <a class="menu-link">
-                        <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/echame-la-culpa.jpg" alt=""><span>Amigo Default</span>
-                    </a>
-                </li> -->
-            </ul>
-        </nav>
+        <div class="menu-container">
+            <img class="menu-imagen-titulo" src="./images/platzi-video.png" alt="Platzi Video">
+            <nav class="menu-navbar">
+                <h2 class="navbar-titulo">Peliculas Recientes</h2>
+                <ol class="navbar-lista peliculas-recientes" id="lista-peliculas-recientes">
+                    <!-- Espacio para plantilla con la Lista de Peliculas Recientes -->
+                </ol>
+            </nav>
+            <nav class="menu-navbar">
+                <h2 class="navbar-titulo">Lista de Amigos</h2>
+                <ul class="navbar-lista amigos" id="lista-amigos">
+                    <!-- Espacio para plantilla con la Lista de Amigos -->
+                </ul>
+            </nav>
+        </div>
+        <!-- Capa para Menu Responsive -->
+        <div class="menu-capa" id="menu-capa"></div>
     </section>
+
     <section id="seccion-peliculas">
         <span class="peliculas-subtitulo">A los golpes</span>
         <h2 class="peliculas-titulo">Acción</h2>
         <div id="peliculas-accion" class="peliculas-container">
             <img src="./images/loader.gif" width="170px" height="170px">
-            <!-- <figure class="pelicula">
-                <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
-                <figcaption>Nombre de Pelicula</figcaption>
-            </figure> -->
+            <!-- Espacio para plantilla con Lista de Peliculas de Accion -->
         </div>
 
         <span class="peliculas-subtitulo">Para llorar</span>
         <h2 class="peliculas-titulo">Drama</h2>
         <div id="peliculas-drama" class="peliculas-container">
             <img src="./images/loader.gif" width="170px" height="170px">
-            <!-- <figure class="pelicula">
-                <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
-                <figcaption>Nombre de Pelicula</figcaption>
-            </figure> -->
+            <!-- Espacio para plantilla con la Lista de Peliculas de Drama -->
         </div>
 
         <span class="peliculas-subtitulo">Dibujitos Animados</span>
         <h2 class="peliculas-titulo">Animación</h2>
         <div id="peliculas-animacion" class="peliculas-container">
             <img src="./images/loader.gif" width="170px" height="170px">
-            <!-- <figure class="pelicula">
-                <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
-                <figcaption>Nombre de Pelicula</figcaption>
-            </figure> -->
+            <!-- Espacio para plantilla con la Lista de Peliculas de Animacion -->
         </div>
     </section>
     <section id="seccion-busqueda">
-        <!-- <figure class="busqueda-pelicula">
-            <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg">
-            <div>
-                <p>Pelicula Encontrada</p>
-                <h3>Nombre de Pelicula</h3>
-            </div>
-        </figure> -->
+        <!-- Espacio para plantilla con los Datos de una Pelicula Resultado del Input en el Header -->
     </section>
-    <section id="modal" class="modal-fondo">
-        <!-- <div id="modal-container">
-            <h2 class="modal-titulo">Pelicula Nombre (2019)</h2>
-            <div class="modal-contenido">
-                <img src="https://static.platzi.com/media/tmp/class-files/git/jquery-to-js-curso/jquery-to-js-curso-master/src/images/covers/midnight.jpg" alt="pelicula">
-                <p>Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum.</p>
-            </div>
-            <button class="modal-button" id="btn-cerrar-modal">Cerrar</button>
-        </div> -->
+    <section id="modal">
+        <!-- Espacio para plantilla que Muestra los Datos de una Pelicula mediante un Modal -->
     </section>
     <script src="index.js"></script>
 </body>
 </html>
+
+
+<!-- ------------------------------------------- -->
+<!-- PLANTILLAS HTML CREADAS MEDIANTE JAVASCRIPT -->
+<!-- ------------------------------------------- -->
+
+<!-- HEADER -->
+<!-- ------ -->
+<!-- <img src="./images/loader.gif"> -->
+<!-- ------ -->
+<!-- <p>
+    <img class="usuario" src="https://randomuser.me/api/portraits/med/men/49.jpg"><span>Luis Valladares</span>
+</p> -->
+
+<!-- SECCION MENU -->
+<!-- ------------ -->
+<!-- <li><a class="menu-link">Peliculas Reciente (2019)</a></li> -->
+<!-- ------------ -->
+<!-- <li>
+    <a class="menu-link">
+        <img src="https://randomuser.me/api/portraits/med/men/49.jpg" alt=""><span>Nombre Amigo</span>
+    </a>
+</li> -->
+
+<!-- SECCION PELICULAS -->
+<!-- ----------------- -->
+<!-- <figure class="pelicula">
+    <img src="https://yts.am/assets/images/movies/how_to_train_your_dragon_the_hidden_world_2019/medium-cover.jpg" alt="pelicula">
+    <figcaption>Nombre de Pelicula</figcaption>
+</figure> -->
+
+<!-- SECCION BUSQUEDA -->
+<!-- ---------------- -->
+<!-- <figure class="busqueda-pelicula">
+    <img src="https://yts.am/assets/images/movies/how_to_train_your_dragon_the_hidden_world_2019/medium-cover.jpg">
+    <div>
+        <p>Pelicula Encontrada</p>
+        <h3>Nombre de Pelicula</h3>
+    </div>
+</figure> -->
+
+<!-- MODAL -->
+<!-- ----- -->
+<!-- <div id="modal-container">
+    <h2 class="modal-titulo">Pelicula Nombre (2019)</h2>
+    <div class="modal-contenido">
+        <img src="https://yts.am/assets/images/movies/how_to_train_your_dragon_the_hidden_world_2019/medium-cover.jpg" alt="pelicula">
+        <p>Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum. Excepteur sunt incididunt consectetur fugiat et cillum.</p>
+    </div>
+    <button class="modal-button" id="btn-cerrar-modal">Cerrar</button>
+</div> -->
