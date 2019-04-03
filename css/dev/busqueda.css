@@ -1,0 +1,29 @@
+/* --------------------------- *\
+	SECCION DE BUSQUEDA
+\* --------------------------- */
+
+.busqueda-pelicula {
+    height: 150px;
+    padding-left: var(--espaciado-normal);
+    margin: 0;
+    cursor: pointer;
+
+    color: white;
+    background:  linear-gradient(to right, #ff0000, #ff458b);
+
+    display: flex;
+    align-items: center;
+}
+
+    .busqueda-pelicula img {
+        width: calc(var(--espaciado-muy-alto)*2);
+        margin-right: var(--espaciado-leve)
+    }
+
+    .busqueda-pelicula p {
+        margin-top: 0;
+    }
+
+    .busqueda-pelicula h3 {
+        margin: 0;
+    }

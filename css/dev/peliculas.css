@@ -1,0 +1,48 @@
+/* --------------------------- *\
+	SECCION DE PELICULAS
+\* --------------------------- */
+
+#seccion-peliculas {
+    overflow: auto;
+    padding: 0 var(--espaciado-leve);
+}
+
+    .peliculas-subtitulo {
+        color: var(--color-gray);
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    .peliculas-titulo {
+        margin-top: 0;
+        margin-bottom: var(--espaciado-leve);
+
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .peliculas-container {
+        height: min-content;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: var(--espaciado-leve);
+
+        display: flex;
+    }
+
+        .pelicula {
+            margin: 0;
+            margin-right: var(--espaciado-leve);
+            cursor: pointer;
+        }
+
+            .pelicula img {
+                width: calc(var(--espaciado-muy-alto)*4);
+                animation: fade-in 1s;
+            }
+
+            .pelicula figcaption {
+                color: #44546B;
+                font-size: 0.9em;
+                margin-top: var(--espaciado-muy-leve);
+            }

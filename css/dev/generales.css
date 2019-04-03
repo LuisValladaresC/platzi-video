@@ -1,0 +1,15 @@
+/* --------------------------- *\
+			GENERALES
+\* --------------------------- */
+
+html {
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr;
+    grid-template-areas: "menu header" "menu peliculas" "menu busqueda";
+}

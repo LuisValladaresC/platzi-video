@@ -1,0 +1,18 @@
+/* --------------------------- *\
+			VARIABLES
+\* --------------------------- */
+
+:root {
+    /* Colores */
+	--color-menu: #171929;
+	--color-black: #000000;
+	--color-gray: #6c757d;
+	--color-lightgray: #f9f9f9;
+	--color-white: #ffffff;
+    /* Espaciado */
+	--espaciado-muy-leve: calc(var(--espaciado-normal)/4);
+	--espaciado-leve: calc(var(--espaciado-normal)/2);
+	--espaciado-normal: 1.25rem;
+	--espaciado-alto: calc(var(--espaciado-normal)*1.5);
+	--espaciado-muy-alto: calc(var(--espaciado-normal)*2);
+}

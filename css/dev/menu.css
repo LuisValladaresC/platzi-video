@@ -1,0 +1,85 @@
+/* --------------------------- *\
+		SECCION DE MENU
+\* --------------------------- */
+
+#seccion-menu {
+    grid-area: menu;
+    height: 100vh;
+}
+
+    .menu-container {
+        width: 350px;
+        height: 100%;
+        color: white;
+        background-color: var(--color-menu);
+        padding: var(--espaciado-normal);
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-rows: min-content auto auto;
+    }
+
+        .menu-imagen-titulo {
+            width: 100%;
+            padding: var(--espaciado-normal) 0;
+            
+            justify-self: center;
+            align-self: center;
+        }
+
+        .menu-navbar {
+            display: grid;
+            grid-template-rows: min-content;
+            overflow: auto;
+        }
+        .menu-navbar:first-of-type {
+            margin: var(--espaciado-normal) 0;
+        }
+
+            .navbar-titulo {
+                margin-top: 0;
+                margin-bottom: var(--espaciado-leve);
+                font-size: 1.6em;
+                font-weight: 600;
+            }
+
+            .navbar-lista {
+                padding: 0;
+                margin: 0;
+                overflow: auto;
+            }
+            .navbar-lista.peliculas-recientes {
+                list-style-position: inside;
+            }
+            .navbar-lista.amigos {
+                list-style: none;
+            }
+
+                .navbar-lista li {
+                    font-size: 0.9em;
+                    margin: var(--espaciado-leve) 0;
+                }
+
+                    .menu-link {
+                        color: inherit;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    .menu-link:hover {
+                        text-decoration: underline;
+                    }
+
+                        .menu-link img {
+                            width: var(--espaciado-muy-alto);
+                            border-radius: 50%;
+                            margin-right: var(--espaciado-leve);
+                            vertical-align: middle;
+                        }
+
+    .menu-capa {
+        height: 100%;
+        width: calc(100vw - 300px);
+        background-color: rgba(0, 0, 0, 0.2);
+
+        display: none;
+    }
