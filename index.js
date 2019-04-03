@@ -23,8 +23,18 @@ const $modal = document.getElementById('modal');
 const $formularioBusqueda = document.getElementById('formulario');
 
 $formularioBusqueda.addEventListener("submit", async (event) => {
+    // Evita el recargo de la pagina
     event.preventDefault()
 
+    // Oculta el teclado cuando estamos en dispositivos moviles
+    const inputOculto = document.createElement('input');
+    inputOculto.setAttribute('type', 'text');
+    document.body.appendChild(inputOculto);
+
+    inputOculto.focus();
+    setTimeout(() => inputOculto.remove(), 1)
+
+    // Obtiene el valor del input e intenta la busqueda mediante el API
     const formData = new FormData($formularioBusqueda);
     const inputBusqueda = formData.get("pelicula");
 
