@@ -4,7 +4,7 @@
 
 // Servicios Externos
 const API_USUARIOS = `https://randomuser.me/api/?inc=name,picture&results=`;
-const API_PELICULAS = "https://yts.am/api/v2/list_movies.json";
+const API_PELICULAS = "https://yts.lt/api/v2/list_movies.json";
 
 // Contenedores
 const $navbar = document.getElementById('header');
