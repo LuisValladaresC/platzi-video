@@ -1,7 +1,5 @@
 # Platzi-Video
 
-Pagina web diseñada como muestra para un servicio de películas online. 
+Página web creada como modelo para un servicio de películas en línea. Este proyecto fue desarrollado desde 0 utilizando HTML5, CSS3 y JavaScript nativo, cuenta con una interfaz de diseño simple y muy bien pulido, totalmente interactiva, con carga dinámica de contenido y una adaptación fluida en cualquier tipo de pantalla
 
-Este proyecto cuenta con un código que realiza diferentes peticiones a un API mediante múltiples operaciones asíncronas, una interface responsive y un diseño simple y pulido
-
->Este proyecto esta inspirado en el curso de jQuery a Javascript de Platzi.
+> Proyecto inspirado en el curso de jQuery a Javascript de Platzi.
